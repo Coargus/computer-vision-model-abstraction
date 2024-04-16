@@ -1,5 +1,7 @@
 """test script of module."""
 
+from __future__ import annotations
+
 
 def hello_world() -> str:
     """Return Hello World."""

@@ -28,7 +28,7 @@ line-length = 80
 indent-width = 4
 
 # Assume Python 3.9
-target-version = "py39"
+target-version = "py38"
 
 [lint]
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
@@ -114,6 +114,7 @@ max-complexity = 10
 [lint.isort]
 force-wrap-aliases = true
 combine-as-imports = true
+required-imports = ["from __future__ import annotations"]
 
 # TODO: your package name here
 known-first-party = ["package_name"]
