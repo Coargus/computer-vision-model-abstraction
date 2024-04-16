@@ -1,46 +1,27 @@
-# Python-Project-Template
+# Computer Vision API (cv_api)
 
-This is a template repository. Please initialize your python project using this template.
+Welcome to the Computer Vision API (cv_api) project, a comprehensive Python library designed for advanced image and video processing tasks.
 
-### 1. Verify and Update Python Version
-Ensure that the correct version of Python is installed on your local system. Update the Python version in the following configuration files:
-- `.github/workflows/*.yml`
-- `pyproject.toml`
+## Overview
 
-### 2. Project Package Name
-Replace `project_name` with your actual project package name, which should include the `src` directory.
+The `cv_api` project is structured to facilitate the development and integration of computer vision features into various applications. It comprises submodules for image detection and video processing, allowing for object detection in images and generative video creation, among other capabilities.
 
-### 3. Setting Up CI/CD for Release
-To enable Continuous Integration and Continuous Deployment (CI/CD) for releasing your software, follow these steps:
+## Structure
 
-- Configure `CI_CD_TOKEN` as a secret variable through the Actions Settings in your repository.
-- To release, add a tag to your repository by executing the following commands:
-```
-git tag -a v0.0.1 -m "Release version 0.0.1"
-git push origin v0.0.1
-```
-## Installing and Using the Package
+- **Image Detection**: This submodule contains algorithms and models that focus on detecting objects within static images.
+- **Video Processing**: Includes models for generating and manipulating video data, specifically using diffusion-based generative models.
 
-You can install the package locally from the top-level directory:
-```python
-python -m pip install --upgrade pip build
-python -m build
-python -m pip install .
-```
+## Features
 
-Distribute
-If you want others to install your package via pip directly, you can upload it to PyPI. This requires an account on PyPI and then you can upload using Twine:
-```
-python -m pip install --upgrade twine
-twine upload dist/*
-```
+- **Object Detection**: Implement object detection models that can locate and identify objects within images.
+- **Video Diffusion**: Extend the `VideoDiffusionModelBase` class to generate video frames based on diffusion processes.
 
-## Ruff Usage
-Here is how you might proceed with checking for issues:
-```
-ruff check .
-```
-If you need to fix issues automatically and if ruff supports it, you would typically see an option like `--fix` mentioned in the documentation or help command:
-```
-ruff check --fix .
+## Installation
+
+You can install `cv_api` by cloning this repository and setting it up with your Python environment:
+
+```bash
+git clone https://your-repository-url.git
+cd cv_api
+pip install -e .
 ```
