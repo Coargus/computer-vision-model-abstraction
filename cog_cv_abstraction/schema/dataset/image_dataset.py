@@ -9,6 +9,7 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     import numpy as np
     import torch
+    from torch.utils.data import Dataset
 
 
 @dataclasses.dataclass
@@ -17,4 +18,4 @@ class CoargusImageDataset(abc.ABC):
 
     unique_labels: list
     labels: list[list[str]]
-    images: list[np.ndarray] | list[torch.Tensor]
+    images: list[np.ndarray] | list[torch.Tensor] | Dataset
