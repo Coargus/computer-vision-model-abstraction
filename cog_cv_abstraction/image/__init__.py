@@ -2,6 +2,6 @@
 
 from __future__ import annotations
 
-from .image import detection
+from .detection import object
 
-__all__ = ["detection"]
+__all__ = ["object"]
