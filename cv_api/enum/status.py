@@ -12,3 +12,4 @@ class Status(enum.Enum):
     SUCCESS = 1
     RUNNING = 2
     FAILURE = 3
+    INVALID = 4
