@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]  # list of folders that contain the packages (["."] by default)
-# include = ["cog_cv_abstraction"]  # package names should match these glob patterns (["*"] by default)
 exclude = ["images","test*",]  # exclude packages matching these glob patterns (empty by default)
 namespaces = true  # to disable scanning PEP 420 namespaces (true by default)
 
