@@ -117,7 +117,7 @@ combine-as-imports = true
 required-imports = ["from __future__ import annotations"]
 
 # TODO: your package name here
-known-first-party = ["package_name"]
+known-first-party = ["cog_cv_abstraction"]
 
 [lint.pydocstyle]
 convention = "google"

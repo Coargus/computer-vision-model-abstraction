@@ -4,15 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]  # list of folders that contain the packages (["."] by default)
-include = ["cv_api"]  # package names should match these glob patterns (["*"] by default)
+include = ["cog_cv_abstraction"]  # package names should match these glob patterns (["*"] by default)
 exclude = ["images"]  # exclude packages matching these glob patterns (empty by default)
 namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
 
 [project]
-name = "cv_api"
+name = "cog_cv_abstraction"
 version = "0.0.1"
 authors = [
-  { name="Minkyu Choi", email="minkyu.choi07@gmail.com" },
+  { name="Minkyu Choi", email="minkyu.choi@coargus.com" },
 ]
 description = "A small example package"
 readme = "README.md"

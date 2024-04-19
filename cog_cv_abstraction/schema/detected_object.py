@@ -5,7 +5,7 @@ from __future__ import annotations
 import dataclasses
 from typing import Any
 
-from cv_api.enum.status import Status
+from cog_cv_abstraction.enum.status import Status
 
 
 @dataclasses.dataclass

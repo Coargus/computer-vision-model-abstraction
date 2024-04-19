@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import abc
 
-from cv_api.video.generative import GenerativeComputerVisionModelBase
+from cog_cv_abstraction.video.generative import (
+    GenerativeComputerVisionModelBase,
+)
 
 
 class VideoDiffusionModelBase(GenerativeComputerVisionModelBase):
