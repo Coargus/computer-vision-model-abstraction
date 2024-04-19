@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
-from cv_api.video.generative.diffusion._base import VideoDiffusionModelBase
+from cog_cv_abstraction.video.generative.diffusion._base import (
+    VideoDiffusionModelBase,
+)
 
 __all__ = ["VideoDiffusionModelBase"]
