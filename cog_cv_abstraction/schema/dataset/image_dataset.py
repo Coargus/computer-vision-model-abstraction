@@ -19,3 +19,15 @@ class CoargusImageDataset(abc.ABC):
     unique_labels: list
     labels: list[list[str]]
     images: list[np.ndarray] | list[torch.Tensor] | Dataset
+
+    @abc.abstractmethod
+    def get_all_images_by_label(self, target_label: str) -> list[np.ndarray]:
+        """Returns all images with the specified label from a dataset.
+
+        Args:
+            target_label (str): Label to filter images by.
+
+        Returns:
+        list[np.ndarray]: Images matching the target label.
+        """
+        raise NotImplementedError
