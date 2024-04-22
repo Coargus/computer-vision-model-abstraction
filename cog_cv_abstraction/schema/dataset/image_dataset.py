@@ -31,3 +31,17 @@ class CoargusImageDataset(abc.ABC):
         list[np.ndarray]: Images matching the target label.
         """
         raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_random_sample(
+        self, sample_size: int
+    ) -> dict[list[str], list[np.ndarray]]:
+        """Returns a random sample of images from the dataset.
+
+        Args:
+            sample_size (int): Number of images to sample.
+
+        Returns:
+            list[np.ndarray]: {images: List of images, labels: List of labels}
+        """
+        raise NotImplementedError
