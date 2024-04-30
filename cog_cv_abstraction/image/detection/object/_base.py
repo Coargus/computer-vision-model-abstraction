@@ -32,3 +32,17 @@ class ObjectDetectionModelBase(abc.ABC):
             bounding boxes, class labels, or confidence scores, depending on the
             implementation.
         """
+
+    @abc.abstractmethod
+    def calibrate(
+        self,
+        **kwargs: any,
+    ) -> any:
+        """Calibrate the detection results.
+
+        Subclasses must implement this method to adjust or refine the detection
+        results based on calibration techniques specific to the model.
+        Calibration can involve adjusting confidence scores,
+        refining bounding box coordinates,
+        or enhancing object class predictions.
+        """
