@@ -15,8 +15,12 @@ class DetectedObject:
     name: str | None
     confidence: float = 0.0
     probability: float = 0.0
-    confidence_of_all_obj: list[float] | None = None
-    probability_of_all_obj: list[float] | None = None
+    confidence_of_all_obj: list[float] | None = dataclasses.field(
+        default_factory=list
+    )
+    probability_of_all_obj: list[float] | None = dataclasses.field(
+        default_factory=list
+    )
     all_obj_detected: list[Any] | None = None
     number_of_detection: int = 0
     is_detected: bool | Status = Status.UNKNOWN
