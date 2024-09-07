@@ -9,11 +9,11 @@ namespaces = true  # to disable scanning PEP 420 namespaces (true by default)
 
 [project]
 name = "cog_cv_abstraction"
-version = "0.0.1"
+version = "v0.0.3-dev"
 authors = [
-  { name="Minkyu Choi", email="minkyu.choi@coargus.com" },
+  { name="Coargus Engineering", email="admin@coargus.com" },
 ]
-description = "A small example package"
+description = "Coargus Computer Vision Abstraction"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
