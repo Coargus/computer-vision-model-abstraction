@@ -7,4 +7,4 @@ from .image import detection
 from .schema import dataset, detected_object, frame
 
 __all__ = ["detection", "status", "detected_object", "dataset", "frame"]
-__version__ = "0.0.3-dev"
+__version__ = "v0.0.4-dev"

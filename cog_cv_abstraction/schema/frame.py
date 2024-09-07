@@ -7,7 +7,7 @@ import numpy as np
 
 
 @dataclasses.dataclass
-class Frame:
+class VideoFrame:
     """Frame class."""
 
     frame_idx: int

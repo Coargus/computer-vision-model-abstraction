@@ -9,7 +9,7 @@ namespaces = true  # to disable scanning PEP 420 namespaces (true by default)
 
 [project]
 name = "cog_cv_abstraction"
-version = "v0.0.3-dev"
+version = "v0.0.4-dev"
 authors = [
   { name="Coargus Engineering", email="admin@coargus.com" },
 ]
