@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import dataclasses
+import logging
 from typing import Any
 
 from cog_cv_abstraction.enum.status import Status
@@ -29,7 +30,21 @@ class DetectedObject:
 
     def __post_init__(self) -> None:
         """Post init."""
-        if self.confidence_of_all_obj and len(self.confidence_of_all_obj) > 0:
+        if (
+            self.confidence_of_all_obj is not None
+            and len(self.confidence_of_all_obj) > 0
+        ):
             self.confidence = max(self.confidence_of_all_obj)
         if self.probability_of_all_obj and len(self.probability_of_all_obj) > 0:
             self.probability = max(self.probability_of_all_obj)
+
+    def get_probability(self) -> float:
+        """Get probability."""
+        if self.probability > 0:
+            return self.probability
+        if self.confidence > 0 and self.probability == 0:
+            logging.info(
+                "Probability is not set, using confidence: %f", self.confidence
+            )
+            return self.confidence
+        return self.probability

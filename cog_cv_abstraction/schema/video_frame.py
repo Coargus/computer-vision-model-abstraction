@@ -16,6 +16,7 @@ class VideoFrame:
     annotated_image: dict[str, np.ndarray] = dataclasses.field(
         default_factory=dict
     )
+    detected_object_set: dict | None = None
     object_of_interest: dict | None = None
     activity_of_interest: dict | None = None
 
