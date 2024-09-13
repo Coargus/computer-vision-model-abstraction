@@ -12,7 +12,7 @@ class ComputerVisionModelVideoEmbeddingBase(abc.ABC):
     """Abstract base class for getting feature vectors of a video clip."""
 
     @abc.abstractmethod
-    def get_feature(self, frames: np.ndarray ) -> any:
+    def get_feature(self, frames: list[np.ndarray] ) -> any:
         """Get feature vectors of a video clip.
 
         Args:
