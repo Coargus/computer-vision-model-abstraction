@@ -30,10 +30,10 @@ class VideoFrame:
 
     def is_any_object_detected(self) -> bool:
         """Check if object is detected."""
-        return len(self.detected_object) == 0
+        return len(self.detected_object_set.objects) > 0
 
     @property
-    def detected_object_list(self) -> list:
+    def list_of_detected_object_of_interest(self) -> list:
         """Get detected object."""
         detected_obj = []
         for obj_name, obj_value in self.object_of_interest.items():
