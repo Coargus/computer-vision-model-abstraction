@@ -37,7 +37,9 @@ class DetectedObjectSet:
         """Iterate through detected objects."""
         return iter(self.detected_object_set)
 
-    def get(self, key: str, default=None) -> DetectedObject | None:
+    def get(
+        self, key: str, default: str | None = None
+    ) -> DetectedObject | None:
         """Get item with a default value."""
         return self.detected_object_set.get(key, default)
 

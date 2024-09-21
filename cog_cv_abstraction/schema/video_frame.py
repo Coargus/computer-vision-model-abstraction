@@ -1,9 +1,14 @@
+"""Coargus's Video Frame Schema."""
+
 from __future__ import annotations
 
 import dataclasses
+from typing import TYPE_CHECKING
 
 import cv2
-import numpy as np
+
+if TYPE_CHECKING:
+    import numpy as np
 
 
 @dataclasses.dataclass
@@ -66,7 +71,6 @@ class VideoFrame:
 
         return detected_obj
 
-    @property
     def detected_bboxes(self, probability_threshold: bool = False) -> list:
         """Get detected object.
 
